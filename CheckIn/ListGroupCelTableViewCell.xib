@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="KGk-i7-Jjw" customClass="ListGroupCelTableViewCell" customModule="CheckIn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="102.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNz-Sc-sPx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vOp-i4-y5N">
+                                <rect key="frame" x="0.0" y="26" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EhU-aT-4fn"/>
+                                    <constraint firstAttribute="width" constant="50" id="iPg-7k-X9I"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxS-3w-w2U">
+                                <rect key="frame" x="58" y="35" width="242" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành viên:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKm-lX-CaB">
+                                <rect key="frame" x="58" y="54" width="62" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.74501591919999999" green="0.74514538050000001" blue="0.74500775340000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFR-0H-yve">
+                                <rect key="frame" x="122" y="36" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.74501591919999999" green="0.74514538050000001" blue="0.74500775340000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRp-6A-U0p">
+                                <rect key="frame" x="297" y="3" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="FQt-zA-thc"/>
+                                    <constraint firstAttribute="height" constant="20" id="vrE-I6-0Od"/>
+                                </constraints>
+                                <state key="normal" image="facebook"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mRp-6A-U0p" secondAttribute="trailing" constant="3" id="0Jd-3O-bLe"/>
+                            <constraint firstAttribute="trailing" secondItem="PxS-3w-w2U" secondAttribute="trailing" constant="20" id="4sW-6P-Zko"/>
+                            <constraint firstItem="PxS-3w-w2U" firstAttribute="top" secondItem="lNz-Sc-sPx" secondAttribute="top" constant="35" id="5Ye-Bz-VCF"/>
+                            <constraint firstItem="vOp-i4-y5N" firstAttribute="leading" secondItem="lNz-Sc-sPx" secondAttribute="leading" id="Mwm-wd-4Ln"/>
+                            <constraint firstItem="mRp-6A-U0p" firstAttribute="top" secondItem="lNz-Sc-sPx" secondAttribute="top" constant="3" id="Q9U-iv-Zsw"/>
+                            <constraint firstItem="PFR-0H-yve" firstAttribute="centerY" secondItem="jKm-lX-CaB" secondAttribute="centerY" id="cGt-ve-Wt1"/>
+                            <constraint firstItem="vOp-i4-y5N" firstAttribute="centerY" secondItem="lNz-Sc-sPx" secondAttribute="centerY" constant="4.5" id="h8b-Qg-suC"/>
+                            <constraint firstItem="jKm-lX-CaB" firstAttribute="leading" secondItem="vOp-i4-y5N" secondAttribute="trailing" constant="8" id="hA5-dd-ZIf"/>
+                            <constraint firstItem="PxS-3w-w2U" firstAttribute="leading" secondItem="vOp-i4-y5N" secondAttribute="trailing" constant="8" id="l0d-yJ-wQv"/>
+                            <constraint firstItem="jKm-lX-CaB" firstAttribute="top" secondItem="PxS-3w-w2U" secondAttribute="bottom" constant="-2" id="tbR-4v-AkR"/>
+                            <constraint firstItem="PFR-0H-yve" firstAttribute="leading" secondItem="jKm-lX-CaB" secondAttribute="trailing" constant="2" id="x6l-4s-P0a"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="lNz-Sc-sPx" secondAttribute="bottom" constant="10" id="00H-A7-2La"/>
+                    <constraint firstItem="lNz-Sc-sPx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GDf-r8-oaV"/>
+                    <constraint firstItem="lNz-Sc-sPx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="g0k-MG-1Ko"/>
+                    <constraint firstAttribute="trailing" secondItem="lNz-Sc-sPx" secondAttribute="trailing" id="rFz-Ze-52k"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnDelete" destination="mRp-6A-U0p" id="aSO-wN-6v6"/>
+                <outlet property="imageGroup" destination="vOp-i4-y5N" id="NqE-Eo-Xuz"/>
+                <outlet property="lblName" destination="PxS-3w-w2U" id="lBN-en-WPu"/>
+                <outlet property="lblNameGroup" destination="jKm-lX-CaB" id="Q7V-MV-BLw"/>
+                <outlet property="lblNumMember" destination="PFR-0H-yve" id="JwJ-qO-cit"/>
+                <outlet property="myView" destination="lNz-Sc-sPx" id="H1e-MX-dtb"/>
+            </connections>
+            <point key="canvasLocation" x="105" y="141.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="facebook" width="32" height="32"/>
+    </resources>
+</document>
