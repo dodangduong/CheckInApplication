@@ -26,6 +26,7 @@
 		E459569C1F11FAC4009032BD /* HistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E459569A1F11FAC4009032BD /* HistoryTableCell.swift */; };
 		E459569D1F11FAC4009032BD /* HistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E459569B1F11FAC4009032BD /* HistoryTableCell.xib */; };
 		E4BFA2831F12163900B0D3BC /* DaysViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFA2821F12163900B0D3BC /* DaysViewCell.swift */; };
+		E4EF949E1F121C0E00472D18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EF949C1F121C0E00472D18 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		E459569A1F11FAC4009032BD /* HistoryTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableCell.swift; sourceTree = "<group>"; };
 		E459569B1F11FAC4009032BD /* HistoryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableCell.xib; sourceTree = "<group>"; };
 		E4BFA2821F12163900B0D3BC /* DaysViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysViewCell.swift; sourceTree = "<group>"; };
+		E4EF949D1F121C0E00472D18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA7F5D9E4C7A60D43BEC4E6D /* Pods_CheckIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheckIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				6B6BD25E1F07E87A00982770 /* resourse */,
 				6B21EC741F07ECEB0091E62A /* AppDelegate.swift */,
 				6B6BD2531F07E38100982770 /* Assets.xcassets */,
+				E4EF949C1F121C0E00472D18 /* Main.storyboard */,
 				6B6BD2551F07E38100982770 /* LaunchScreen.storyboard */,
 				6B6BD2581F07E38100982770 /* Info.plist */,
 			);
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B6BD2571F07E38100982770 /* LaunchScreen.storyboard in Resources */,
+				E4EF949E1F121C0E00472D18 /* Main.storyboard in Resources */,
 				E459569D1F11FAC4009032BD /* HistoryTableCell.xib in Resources */,
 				6B6BD2541F07E38100982770 /* Assets.xcassets in Resources */,
 				6BEDC6561F089F8C00163A7A /* ListGroupCelTableViewCell.xib in Resources */,
@@ -318,6 +322,14 @@
 				6B6BD2561F07E38100982770 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E4EF949C1F121C0E00472D18 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4EF949D1F121C0E00472D18 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -17,16 +17,19 @@ class HistoryProfileVC: BaseViewController, UICollectionViewDelegate, UICollecti
     var arr : [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        for item in 1...30 {
+        for item in 1...31 {
             arr.append(String(item))
+            print(item)
         }
+        imageView.image = #imageLiteral(resourceName: "profile")
+        setCircleImage(profileImage: imageView)
         setNavigationBar(title: "", leftImage: "facebook", rightImage: "facebook", selectorleft: Selector(""), selectorRight: Selector(""))
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib.init(nibName: "HistoryTableCell", bundle: nil), forCellReuseIdentifier: "HistoryTableCell")
-        self.collectionView.register(DaysViewCell.self, forCellWithReuseIdentifier: "Cell")
+//        collectionView.register((DaysViewCell.self), forCellWithReuseIdentifier: "Cell")
         
         // Do any additional setup after loading the view.
     }
@@ -42,10 +45,7 @@ class HistoryProfileVC: BaseViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! DaysViewCell
-        
-        cell.layer.borderColor = UIColor.blue.cgColor
-        cell.layer.borderWidth = 2
-        cell.lblDaysView.text = arr[indexPath.row]
+        cell.btnDays.setTitle(arr[indexPath.row], for: .normal)
         return cell
     }
     
