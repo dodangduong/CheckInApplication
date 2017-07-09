@@ -17,7 +17,19 @@ class TypeLoginVC: BaseViewController {
     
     @IBOutlet weak var btnNext: UIButton!
     
+    var staffClick = false
+    var managerClick = false
+    
     @IBAction func btnNext(_ sender: Any) {
+        if staffClick {
+            
+            let profile = self.storyboard?.instantiateViewController(withIdentifier: "ProfileInformationVC") as! ProfileInformationVC
+            present(profile, animated: true, completion: nil)
+        } else {
+            
+            let listGr = self.storyboard?.instantiateViewController(withIdentifier: "ListGroupVC") as! ListGroupVC
+            present(listGr, animated: true, completion: nil)
+            }
     }
 
     override func viewDidLoad() {
@@ -29,7 +41,29 @@ class TypeLoginVC: BaseViewController {
         setCornerButton(button: btnNext, values: 30)
         setBoderButton(button: btnNext, collor: UIColor.white, width: 2)
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(staff_Click))
+        staffImage.addGestureRecognizer(tapGestureRecognizer)
+        staffImage.isUserInteractionEnabled = true
+        
+        let tapGestureRecognizer_ma = UITapGestureRecognizer(target: self, action: #selector(manager_Click))
+        managerImage.addGestureRecognizer(tapGestureRecognizer_ma)
+        managerImage.isUserInteractionEnabled = true
+        
+
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func staff_Click() {
+        staffClick = true
+        managerClick = false
+        print(staffClick)
+    }
+    
+    func manager_Click() {
+        staffClick = false
+        managerClick = true
+        print(managerClick)
     }
 
     override func didReceiveMemoryWarning() {

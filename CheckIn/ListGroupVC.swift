@@ -25,7 +25,7 @@ class ListGroupVC: BaseViewController ,UITableViewDelegate,UITableViewDataSource
         self.tableView.separatorStyle = .none
         self.tableView.backgroundColor = UIColor.clear
         
-        setNavigationBar(title: "", leftImage: "facebook", rightImage: "facebook", selectorleft: #selector(ListGroupVC.printName), selectorRight: #selector(ListGroupVC.printName))
+        setNavigationBar(title: "", leftImage: "facebook", rightImage: "facebook", selectorleft: #selector(ListGroupVC.back), selectorRight: #selector(ListGroupVC.printName))
         
         enableFloatingButton(method: #selector(ListGroupVC.printName), image: "facebook", width: 60, heigh: 60, x: UIScreen.main.bounds.size.width - 100, y: UIScreen.main.bounds.size.height - 100, backgroundcolor: UIColor.orange)
         
@@ -37,6 +37,11 @@ class ListGroupVC: BaseViewController ,UITableViewDelegate,UITableViewDataSource
     func printName(){
         print("name is Left")
     }
+    
+    func back() {
+        let typeLg = self.storyboard?.instantiateViewController(withIdentifier: "TypeLoginVC") as! TypeLoginVC
+        present(typeLg, animated: true, completion: nil)
+        }
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

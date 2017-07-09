@@ -69,14 +69,14 @@ class BaseViewController: UIViewController {
     func setNavigationBar(title : String, leftImage : String,rightImage : String, selectorleft : Selector,selectorRight : Selector) -> UINavigationItem{
         let height: CGFloat = 70
         let navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: height))
-        navbar.backgroundColor = UIColor.blue
+        navbar.backgroundColor = UIColor.red
         let navItem = UINavigationItem()
         navItem.title = title
         navItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: leftImage), style: .plain, target: self, action: selectorleft)
-        navItem.leftBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: self, action: selectorleft)
         navItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: rightImage), style: .plain, target: self, action: selectorRight)
         
         navbar.items = [navItem]
+        
         
         view.addSubview(navbar)
         return navItem

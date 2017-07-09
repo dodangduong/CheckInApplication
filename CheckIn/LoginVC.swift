@@ -16,9 +16,7 @@ class LoginVC: BaseViewController {
     
     
     @IBAction func btnLoginFace(_ sender: Any) {
-//        let listGVC = storyboard?.instantiateViewController(withIdentifier: "ListGroupVC") as! ListGroupVC
-//        
-//        present(listGVC, animated: true, completion: nil)
+
         getFacebookUserInfo()
     }
     
@@ -52,6 +50,9 @@ class LoginVC: BaseViewController {
                 Connection.add(graphRequest) { (Connection, result, error) in
                     let info = result as! [String : AnyObject]
                     print(info["name"] as! String)
+                            let typeLg = self.storyboard?.instantiateViewController(withIdentifier: "TypeLoginVC") as! TypeLoginVC
+                    
+                            self.present(typeLg, animated: true, completion: nil)
                 }
                 Connection.start()
             }
