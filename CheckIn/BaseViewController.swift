@@ -29,8 +29,26 @@ class BaseViewController: UIViewController {
         profileImage.clipsToBounds = true
     }
     
-    func setCornerButton(button : UIButton, values : CGFloat) {
+    func setCornerButtonBorder(button : UIButton, values : CGFloat, color : UIColor, border_w : CGFloat ) {
          button.layer.cornerRadius = values
+        button.layer.borderColor = color.cgColor
+        button.layer.borderWidth = border_w
+    }
+    
+    func setCornerButton(button : UIButton,values : CGFloat) {
+        button.layer.cornerRadius = values
+    }
+    
+    func setCornerButtonMul(button : UIButton..., values : CGFloat) {
+        for item in button {
+            item.layer.cornerRadius = values
+        }
+    }
+    
+    func setCornerView(button : UIView..., values : CGFloat) {
+        for item in button {
+            item.layer.cornerRadius = values
+        }
     }
     
     func setBoderButton(button : UIButton,collor : UIColor,width : CGFloat) {
@@ -48,13 +66,14 @@ class BaseViewController: UIViewController {
     }
     
     
-    func setNavigationBar(title : String, leftImage : String,rightImage : String, selectorleft : Selector,selectorRight : Selector ) -> UINavigationItem{
+    func setNavigationBar(title : String, leftImage : String,rightImage : String, selectorleft : Selector,selectorRight : Selector) -> UINavigationItem{
         let height: CGFloat = 70
         let navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: height))
         navbar.backgroundColor = UIColor.blue
         let navItem = UINavigationItem()
         navItem.title = title
         navItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: leftImage), style: .plain, target: self, action: selectorleft)
+        navItem.leftBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: self, action: selectorleft)
         navItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: rightImage), style: .plain, target: self, action: selectorRight)
         
         navbar.items = [navItem]
@@ -63,6 +82,25 @@ class BaseViewController: UIViewController {
         return navItem
         
     }
+    
+    func setNavigationBarTitle(title : String, leftTitle : String,rightTitle : String, selectorleft : Selector,selectorRight : Selector) -> UINavigationItem{
+        let height: CGFloat = 70
+        let navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: height))
+        navbar.backgroundColor = UIColor.blue
+        let navItem = UINavigationItem()
+        navItem.title = title
+        navItem.leftBarButtonItem = UIBarButtonItem(title: leftTitle, style: .plain, target: self, action: selectorleft)
+        navItem.rightBarButtonItem = UIBarButtonItem(title: rightTitle, style: .plain, target: self, action: selectorRight)
+        
+        navbar.items = [navItem]
+        
+        view.addSubview(navbar)
+        return navItem
+        
+    }
+
+    
+    
     
     func enableFloatingButton(method : Selector, image : String, width : CGFloat, heigh : CGFloat, x : CGFloat, y : CGFloat, backgroundcolor : UIColor) {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: method)
@@ -74,6 +112,18 @@ class BaseViewController: UIViewController {
         button.isUserInteractionEnabled = true
         view.addSubview(button)
         }
+    
+    func enableFloatingButtonNormal(method : Selector, image : String, width : CGFloat, heigh : CGFloat, x : CGFloat, y : CGFloat, backgroundcolor : UIColor, title : String,corner : CGFloat) {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: method)
+        let button = UIButton(frame: CGRect(x: x, y: y, width: width, height: heigh))
+        button.setImage(UIImage(named: image), for: .normal)
+        button.backgroundColor = backgroundcolor
+        button.addTarget(self, action: method, for: .touchUpInside)
+        button.setTitle(title, for: .normal)
+        button.layer.cornerRadius = corner
+        view.addSubview(button)
+    }
+
     
     
     
